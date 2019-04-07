@@ -1,2 +1,3 @@
-# angular-starter
-Template for angular apps
+# angular-eventsapp
+
+Angular app for events management. 
