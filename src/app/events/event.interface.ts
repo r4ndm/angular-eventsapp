@@ -2,8 +2,18 @@ import { isNgContainer } from "@angular/compiler";
 
 export interface ILocation {
     address: string,
-        city: string,
-        country: string
+    city: string,
+    country: string
+}
+
+export interface ISession {
+    id: number,
+    name: string,
+    presenter: string,
+    duration: number,
+    level: string,
+    abstract: string,
+    voters: string[]
 }
 
 export interface IEvent {
@@ -13,5 +23,7 @@ export interface IEvent {
     time: string,
     price: number,
     imageUrl: string,
-    location: ILocation
+    location?: ILocation,
+    onlineUrl?: string,
+    sessions: ISession[]
 }
