@@ -3,7 +3,7 @@ import { IEvent } from './event.interface';
 import { EventService } from './event.service';
 
 @Component({
-    selector: 'events-list',
+    //selector: 'events-list',  // removed after router was added
     templateUrl: './events-list.component.html'
 })
 export class EventsListComponent implements OnInit {
@@ -15,6 +15,6 @@ export class EventsListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-      this.events = this.eventService.getEvents();
+      this.eventService.getEvents().subscribe(events => this.events = events);
     }
 }
